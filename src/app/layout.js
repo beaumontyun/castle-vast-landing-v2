@@ -1,7 +1,8 @@
-import { Inter } from 'next/font/google'
 import './globals.css'
+import "tw-elements/dist/css/tw-elements.min.css";
+import { ABeeZee } from "next/font/google"
 
-const inter = Inter({ subsets: ['latin'] })
+const abeezee = ABeeZee({ subsets: ['latin'], weight: "400" })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={abeezee.className}>
+        <div className='bg-gradient-to-r from-gray-100 to-gray-50'>
+        {children}
+        </div>
+        </body>
     </html>
   )
 }
